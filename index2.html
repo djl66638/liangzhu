@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>良渚文化</title>
+  <link rel="stylesheet" href="css/index2.css">
+</head>
+
+<body>
+  <div class="banner">
+    <div class="bg" id="bbg">
+      <img src="res/load_bg.png" alt="" class="background" id="back">
+      <div class="music" onclick="ms()">
+        <img src="res/music.png" alt="">
+        <audio src="res/mp3.mp3" loop="loop" preload="auto" autoplay="auto" class="ad"></audio>
+      </div>
+      <div class="word1">
+        <img src="res/word1.png" alt="">
+      </div>
+      <div class="word2">
+        <img src="res/word2.png" alt="">
+      </div>
+      <div class="lang">
+        <img src="res/lang.png" alt="">
+      </div>
+      <div class="hehua2">
+        <img src="res/hehua2.png" alt="">
+      </div>
+      <div class="hehua1">
+        <img src="res/hehua1.png" alt="">
+      </div>
+      <div class="yucongAll">
+        <div class="yucong" onclick="change()">
+          <img src="res/yucong.png" alt="" class="img1">
+          <img src="res/faguang.png" alt="" class="img2">
+        </div>
+        <div class="yucong2">
+          <img src="res/yucong2.png" alt="" id="huan">
+        </div>
+      </div>
+      <div class="word">
+        <img src="res/light.png" alt="" class="light">
+      </div>
+      <div class="circle-container">
+        <img src="res/环.png" class="circle" alt="Circle Image" id="circleImg">
+      </div>
+
+      <div class="shitou" id="ta">
+        <img src="res/im0.png" alt="插入的图片" id="targetImg" />
+      </div>
+      <div class="kuang">
+        <img src="res/图层 21.png" alt="插入的图片" id="tu" />
+      </div>
+      <div class="wenzi">
+        <img src="res/打 造 玉 琮.png" alt="插入的图片" id="img3" />
+      </div>
+      <div class="jieshao">
+        <img src="res/选取最原始的玉石准备进行加工.png" alt="插入的图片" id="wenzi" />
+      </div>
+      <div class="zuandong">
+        <img src="res/左1.png" alt="插入的图片" />
+      </div>
+      <div class="overlay" id="newb">
+        <img src="res/xinbg.jpg" alt="" class="background">
+      </div>
+      <div class="jiantou">
+        <img src="res/jiantou.png" alt="">
+      </div>
+    </div>
+
+  </div>
+  <script>
+    let bg = document.querySelector(".background")
+    let box = document.querySelector(".yucongAll")
+    let box2 = document.querySelector(".yucong")
+    let yucong = document.querySelector(".img1")
+    let yucong2 = document.querySelector(".yucong2")
+    let faguang = document.querySelector(".img2")
+    let light = document.querySelector(".light")
+    let word1 = document.querySelector(".word1")
+    let word2 = document.querySelector(".word2")
+    let hehua1 = document.querySelector(".hehua1")
+    let hehua2 = document.querySelector(".hehua2")
+    let lang = document.querySelector(".lang")
+    let circle_container = document.querySelector(".circle-container")
+    let shitou = document.querySelector(".shitou")
+    let kuang = document.querySelector(".kuang")
+    let wenzi = document.querySelector(".wenzi")
+    let jieshao = document.querySelector(".jieshao")
+    let zuandong = document.querySelector(".zuandong")
+    let music = document.querySelector(".music")
+    let mp3 = document.querySelector(".ad")
+    let jiantou = document.querySelector(".jiantou")
+    let flag = 1;
+    function ms() {
+      if (mp3.paused) {
+        mp3.play()
+      } else {
+        mp3.pause()
+      }
+    }
+    function change() {
+      if (flag == 1) {
+        yucong.style.opacity = "0"
+        faguang.style.opacity = "1"
+        light.style.opacity = "0"
+        jiantou.style.opacity = "1"
+        yucong.style.animationPlayState = "paused"
+        faguang.style.animationPlayState = "paused"
+        setTimeout(delay, 1000)
+        flag = 2
+      } else {
+        yucong2.style.opacity = "1"
+        box2.style.opacity = "0"
+        inter2 = setInterval(down2, 20)
+        inter3 = setInterval(extend, 5)
+        inter4 = setInterval(moveleft, 20)
+        inter5 = setInterval(overturn, 5)
+        word1.style.opacity = "0"
+        word2.style.opacity = "0"
+        jiantou.style.opacity = "0"
+        circle_container.style.opacity = "1"
+        shitou.style.opacity = "1"
+        kuang.style.opacity = "1"
+        wenzi.style.opacity = "1"
+        jieshao.style.opacity = "1"
+        zuandong.style.opacity = "1"
+      }
+
+    }
+    function delay() {
+      inter = setInterval(down, 30)
+      word1.style.opacity = "1"
+      word2.style.opacity = "1"
+      hehua1.style.opacity = "1"
+      hehua2.style.opacity = "1"
+      lang.style.opacity = ".1"
+    }
+    let n = 1
+    let t = 42.50
+    let steep_top = 1
+    function down() {
+      if ((t + steep_top * n) >= 70) {
+        clearInterval(inter)
+      } else {
+        box.style.top = t + steep_top * n + "%"
+      }
+      n++
+    }
+    let n2 = 1
+    let t2 = 39.2
+    let ex = 1
+    function down2() {
+      if ((t + steep_top * n) >= 83) {
+        clearInterval(inter2)
+      } else {
+        box.style.top = t + steep_top * n + "%"
+      }
+      n++
+    }
+
+
+    function extend() {
+      yucong2.style.transform = "rotate(90deg)"
+      if ((t2 + ex * n2) >= 175) {
+        clearInterval(inter3)
+      } else {
+        box.style.width = t2 + ex * n2 + "%"
+      }
+      n2++
+    }
+    let n3 = 1
+    let t3 = 30.04
+    let steep_left = 1
+    function moveleft() {
+      if ((t3 - steep_left * n3) <= -6) {
+        clearInterval(inter4)
+      } else {
+        box.style.left = t3 - steep_left * n3 + "%"
+      }
+      n3++
+    }
+    let n4 = 1
+    let angel = 1
+    function overturn() {
+      if ((angel * n4) >= 90) {
+        clearInterval(inter5)
+      } else {
+        yucong2.style.transform = "rotate(" + angel * n4 + "deg)"
+      }
+      n4++
+    }
+    var circleImg = document.getElementById('circleImg');
+    var targetImg = document.getElementById('targetImg');
+    var targetImg2 = document.getElementById('wenzi');
+    var targetImg3 = document.getElementById('img3');
+    var targetImg4 = document.getElementById('tu'); // 获取目标图片元素
+    var isDragging = false;
+    var dragStartDeg = 0;
+    var currentDeg = 0;
+    var startTouchX = 0;
+    var startTouchY = 0;
+    var rotationCount = 0; // 旋转计数器
+
+    circleImg.addEventListener('touchstart', function (event) {
+      event.preventDefault();
+      isDragging = true;
+
+      var circleRect = circleImg.getBoundingClientRect();
+      var center = {
+        x: circleRect.left + circleImg.offsetWidth / 2,
+        y: circleRect.top + circleImg.offsetHeight / 2
+      };
+
+      startTouchX = event.touches[0].clientX - center.x;
+      startTouchY = event.touches[0].clientY - center.y;
+
+      var touchDeg = Math.atan2(startTouchY, startTouchX) * 180 / Math.PI;
+      dragStartDeg = touchDeg - currentDeg;
+    });
+
+    circleImg.addEventListener('touchmove', function (event) {
+      event.preventDefault();
+      if (isDragging) {
+        var circleRect = circleImg.getBoundingClientRect();
+        var center = {
+          x: circleRect.left + circleImg.offsetWidth / 2,
+          y: circleRect.top + circleImg.offsetHeight / 2
+        };
+
+        var touchX = event.touches[0].clientX - center.x;
+        var touchY = event.touches[0].clientY - center.y;
+        var touchDeg = Math.atan2(touchY, touchX) * 180 / Math.PI;
+        var dragEndDeg = touchDeg - dragStartDeg;
+
+        // 限制只有在向右旋转时才允许移动
+        if (dragEndDeg > 0) {
+          circleImg.style.transform = 'rotate(' + dragEndDeg + 'deg)';
+          currentDeg = dragEndDeg;
+          // 其他处理逻辑保持不变
+          var rotation = Math.floor(dragEndDeg / 42);
+          if (rotation !== rotationCount) {
+            rotationCount = rotation;
+            // 根据旋转次数来更改目标图片的内容
+            switch (rotationCount) {
+              // 其他旋转次数的情况类似
+
+              case 1:
+                var existingImg = document.querySelector('.moving-image');
+                if (existingImg) {
+                  existingImg.remove();  // 移除已存在的图片元素
+                }
+                var existingImg2 = document.querySelector('.moving-image2');
+                if (existingImg2) {
+                  existingImg2.remove();  // 移除已存在的图片元素
+                }
+                var existingImg3 = document.querySelector('.moving-image3');
+                if (existingImg3) {
+                  existingImg3.remove();  // 移除已存在的图片元素
+                }
+                var existingImg4 = document.querySelector('.moving-image4');
+                if (existingImg4) {
+                  existingImg4.remove();  // 移除已存在的图片元素
+                }
+                targetImg.style.opacity = 0;  // 将目标图片透明化
+                setTimeout(function () {
+                  targetImg.src = 'res/imm0.png';  // 更改新的图片内容
+                  targetImg.style.opacity = 1;  // 慢慢将新的图片浮现出来
+                }, 500);
+                break;
+              // 其他旋转次数的情况类似
+              case 2:
+                var existingImg = document.querySelector('.moving-image');
+                if (existingImg) {
+                  existingImg.remove();  // 移除已存在的图片元素
+                }
+                var existingImg2 = document.querySelector('.moving-image2');
+                if (existingImg2) {
+                  existingImg2.remove();  // 移除已存在的图片元素
+                }
+                var existingImg3 = document.querySelector('.moving-image3');
+                if (existingImg3) {
+                  existingImg3.remove();  // 移除已存在的图片元素
+                }
+                var existingImg4 = document.querySelector('.moving-image4');
+                if (existingImg4) {
+                  existingImg.remove();  // 移除已存在的图片元素
+                }
+                targetImg.style.opacity = 0;  // 将目标图片透明化
+                setTimeout(function () {
+                  targetImg2.src = "res/开料制坯，将玉料切割成初步的毛坯形状.png";
+                  targetImg.src = 'res/im1.png';  // 更改新的图片内容
+                  targetImg.style.opacity = 1;  // 慢慢将新的图片浮现出来
+                }, 500);
+                break;
+
+              case 3:
+                var existingImg = document.querySelector('.moving-image');
+                if (existingImg) {
+                  existingImg.remove();  // 移除已存在的图片元素
+                }
+                var existingImg2 = document.querySelector('.moving-image2');
+                if (existingImg2) {
+                  existingImg2.remove();  // 移除已存在的图片元素
+                }
+                var existingImg3 = document.querySelector('.moving-image3');
+                if (existingImg3) {
+                  existingImg3.remove();  // 移除已存在的图片元素
+                }
+                var existingImg4 = document.querySelector('.moving-image4');
+                if (existingImg4) {
+                  existingImg4.remove();  // 移除已存在的图片元素
+                }
+                targetImg.style.opacity = 0;  // 将目标图片透明化
+                setTimeout(function () {
+                  targetImg2.src = "res/钻孔：用竹管，动物肢骨作为钻具，带动解玉砂进行钻孔.png";
+                  targetImg.src = 'res/immm2.png';  // 更改新的图片内容
+                  targetImg.style.opacity = 1;  // 慢慢将新的图片浮现出来
+                  targetImg.style.top = "27%"
+                  targetImg.style.left = "0%"
+                  targetImg.style.width = "100%"
+                  targetImg.style.height = "82%"
+                  // 创建一个新的图片元素
+                  var newImg = document.createElement('img');
+
+                  // 设置新图片的 src 属性为指定的图片路径
+                  newImg.src = 'res/imm2.png';
+                  newImg.style.position = 'absolute';
+                  newImg.style.top = '-42%'; // 设置图片顶部距离容器顶部的距离
+                  newImg.style.left = '28%'; // 设置图片距离容器左侧的距禿
+                  newImg.style.width = '53%';
+                  newImg.style.zIndex = '1'; // 设置图片宽度为容器宽度的53%
+                  document.querySelector('.shitou').appendChild(newImg);
+                  newImg.classList.add('moving-image');
+
+                  // 触发过渡效果
+                  setTimeout(function () {
+                    newImg.classList.add('show');
+                  }, 100); // 设置一个延时以确保过渡效果生效
+                }, 500); // 在目标图片切换后再触发新图片的显示
+                break;
+
+              case 4:
+
+                var existingImg = document.querySelector('.moving-image');
+                if (existingImg) {
+                  existingImg.remove();  // 移除已存在的图片元素
+                }
+                var existingImg2 = document.querySelector('.moving-image2');
+                if (existingImg2) {
+                  existingImg2.remove();  // 移除已存在的图片元素
+                }
+                var existingImg3 = document.querySelector('.moving-image3');
+                if (existingImg3) {
+                  existingImg3.remove();  // 移除已存在的图片元素
+                }
+                var existingImg4 = document.querySelector('.moving-image4');
+                if (existingImg4) {
+                  existingImg4.remove();  // 移除已存在的图片元素
+                }
+
+
+                targetImg.style.opacity = 0;  // 将目标图片透明化
+                setTimeout(function () {
+                  targetImg2.src = "res/对玉琮进行碾磨抛光，充分释放玉器的温润美感.png";
+                  targetImg.src = 'res/immm3.png';  // 更改新的图片内容
+                  targetImg.style.opacity = 1;  // 慢慢将新的图片浮现出来
+                  targetImg.style.top = "-4%"
+                  targetImg.style.left = "20%"
+                  targetImg.style.width = "60%"
+                  targetImg.style.height = "115%"
+                  var newImg = document.createElement('img');
+                  // 设置新图片的 src 属性为指定的图片路径
+                  newImg.src = 'res/imm3.png';
+                  newImg.style.position = 'absolute';
+                  newImg.style.top = '64%'; // 设置图片顶部距离容器顶部的距离
+                  newImg.style.left = '28%'; // 设置图片距离容器左侧的距离
+                  newImg.style.width = '24%';
+                  newImg.style.height = '16%';
+                  newImg.style.zIndex = '1' // 设置图片宽度为容器宽度的53%
+                  document.querySelector('.shitou').appendChild(newImg);
+                  newImg.classList.add('moving-image2');
+
+                  // 触发过渡效果
+                  setTimeout(function () {
+                    newImg.classList.add('show');
+                  }, 1000); // 设置一个延时以确保过渡效果生效
+                }, 500);
+
+                break;
+
+
+
+              case 5:
+                var existingImg = document.querySelector('.moving-image');
+                if (existingImg) {
+                  existingImg.remove();  // 移除已存在的图片元素
+                }
+                var existingImg2 = document.querySelector('.moving-image2');
+                if (existingImg2) {
+                  existingImg2.remove();  // 移除已存在的图片元素
+                }
+                var existingImg3 = document.querySelector('.moving-image3');
+                if (existingImg3) {
+                  existingImg3.remove();  // 移除已存在的图片元素
+                }
+                var existingImg4 = document.querySelector('.moving-image4');
+                if (existingImg4) {
+                  existingImg4.remove();  // 移除已存在的图片元素
+                }
+                setTimeout(function () {
+                  targetImg2.src = "res/用石竹木等硬性片装工具，带动解玉砂进行来回切割.png";
+                  targetImg.style.opacity = 0;
+                  // 将目标图片透明化
+                  targetImg.src = 'res/immm4.png';  // 更改新的图片内容
+                  targetImg.style.opacity = 1;  // 慢慢将新的图片浮现出来
+                  targetImg.style.top = "0%"
+                  targetImg.style.left = "11%"
+                  targetImg.style.width = "82%"
+                  targetImg.style.height = "115%"
+                  // 创建一个新的图片元素
+                  var newImg = document.createElement('img');
+                  // 设置新图片的 src 属性为指定的图片路径
+                  newImg.src = 'res/imm4.png';
+                  newImg.style.position = 'absolute';
+                  newImg.style.top = '81%'; // 设置图片顶部距离容器顶部的距离
+                  newImg.style.left = '5%'; // 设置图片距离容器左侧的距离
+                  newImg.style.width = '40%';
+                  newImg.style.height = '24%';
+                  newImg.style.zIndex = '1' // 设置图片宽度为容器宽度的53%
+                  document.querySelector('.shitou').appendChild(newImg);
+                  newImg.classList.add('moving-image3');
+
+                  // 触发新图片的过渡效果
+                  setTimeout(function () {
+                    newImg.classList.add('show');
+                  }, 1000); // 设置一个延时以确保过渡效果生效
+                }, 500);
+                break;
+
+              case 6:
+                var existingImg = document.querySelector('.moving-image');
+                if (existingImg) {
+                  existingImg.remove();  // 移除已存在的图片元素
+                }
+                var existingImg2 = document.querySelector('.moving-image2');
+                if (existingImg2) {
+                  existingImg2.remove();  // 移除已存在的图片元素
+                }
+                var existingImg3 = document.querySelector('.moving-image3');
+                if (existingImg3) {
+                  existingImg3.remove();  // 移除已存在的图片元素
+                }
+                var existingImg4 = document.querySelector('.moving-image4');
+                if (existingImg4) {
+                  existingImg4.remove();  // 移除已存在的图片元素
+                }
+                var existingImg = document.querySelector('.moving-image4');
+                if (existingImg) {
+                  existingImg.remove();  // 移除已存在的图片元素
+                }
+                targetImg.style.opacity = 0;  // 将目标图片透明化
+                setTimeout(function () {
+                  targetImg2.src = "res/利用动物筋条等柔韧性线状物，沾上解玉砂进行拉切等技法勾勒和刻画出各种纹饰.png";
+                  targetImg.src = 'res/imm61.png';  // 更改新的图片内容
+                  targetImg.style.opacity = 1;  // 慢慢将新的图片浮现出来
+                }, 500);
+                break;
+
+
+              case 7:
+                var existingImg = document.querySelector('.moving-image');
+                if (existingImg) {
+                  existingImg.remove();  // 移除已存在的图片元素
+                }
+                var existingImg2 = document.querySelector('.moving-image2');
+                if (existingImg2) {
+                  existingImg2.remove();  // 移除已存在的图片元素
+                }
+                var existingImg3 = document.querySelector('.moving-image3');
+                if (existingImg3) {
+                  existingImg3.remove();  // 移除已存在的图片元素
+                }
+                var existingImg4 = document.querySelector('.moving-image4');
+                if (existingImg4) {
+                  existingImg4.remove();  // 移除已存在的图片元素
+                }
+
+                targetImg.style.opacity = 0;
+                targetImg2.src = "res/利用动物筋条等柔韧性线状物，沾上解玉砂进行拉切等技法勾勒和刻画出各种纹饰.png";  // 将目标图片透明化
+                targetImg.src = 'res/im6.png';  // 更改新的图片内容
+                setTimeout(function () {
+                  targetImg.style.opacity = 1;  // 慢慢将新的图片浮现出来
+
+                  // 创建一个新的图片元素
+                  var newImg = document.createElement('img');
+                  // 设置新图片的 src 属性为指定的图片路径
+                  targetImg2.src = "res/雕刻纹样：纹样是玉琮灵魂，由巫师身份的专业雕刻师亲自操刀，综合运用阴线刻，微雕，浮雕，透雕，圆雕等技法勾勒和刻画出各种纹饰.png";
+                  newImg.src = 'res/imm5.png';
+                  newImg.style.position = 'absolute';
+                  newImg.style.top = '56%'; // 设置图片顶部距离容器顶部的距离
+                  newImg.style.left = '-20%'; // 设置图片距离容器左侧的距离
+                  newImg.style.width = '60%';
+                  newImg.style.zIndex = '1'; // 设置图片宽度为容器宽度的53%
+                  newImg.classList.add('show');
+                  document.querySelector('.shitou').appendChild(newImg);
+                  newImg.classList.add('moving-image4');
+
+                  // 触发新图片的过渡效果
+                  setTimeout(function () {
+                    newImg.classList.add('show');
+                  }, 100); // 设置一个延时以确保过渡效果生效
+                }, 500);
+                break;
+
+
+
+
+              case 8://最后一次效果
+
+                var existingImg = document.querySelector('.moving-image4');
+                if (existingImg) {
+                  existingImg.remove();  // 移除已存在的图片元素
+                }
+                targetImg4.style.opacity = 0;
+                targetImg4.style.transition = "transform 1 s";
+                targetImg3.style.opacity = 0;
+                targetImg3.style.transition = "transform 1 s";
+                targetImg2.style.opacity = 0;
+                targetImg2.style.transition = "transform 0.5s";
+                targetImg.style.opacity = 0;  // 将目标图片透明化
+                targetImg.style.transition = "transform 1.5s"; // 使用1秒的时间完成transform的过渡效果
+                var ta = document.getElementById("ta")
+                setTimeout(function () {
+                  targetImg.style.transform = "translateY(180px)"; // 向下移动
+
+                  //ta.style.zIndex = '-999';
+                  ta.style.opacity = '0'
+                  ta.style.transition = "opacity 6s"
+                  function fadeOut(element, duration) {
+                    var opacity = 1;
+                    var interval = 10; // 每隔10毫秒变化一次透明度
+                    var steps = duration / interval; // 总步数
+                    var currentStep = 0;
+
+                    var fadeEffect = setInterval(function () {
+                      opacity -= 1 / steps; // 透明度每次减少1 / 总步数
+                      element.style.opacity = opacity;
+
+                      currentStep++;
+                      if (currentStep >= steps) {
+                        clearInterval(fadeEffect);
+                        element.style.opacity = opacity; // 渐变完成后保持最终透明度不变
+                      }
+                    }, interval);
+                  }
+
+
+                  var huanimg = document.querySelector('.inserted-div img');
+                  fadeOut(huanimg, 3000); // 1秒钟完成渐变效果
+
+                  function moveUpAndFadeOut(element, distance, duration) {
+                    var currentTop = parseInt(element.style.top) || 0;
+                    var interval = 10; // 每隔10毫秒变化一次
+                    var steps = duration / interval; // 总步数
+                    var currentStep = 0;
+
+                    var moveEffect = setInterval(function () {
+                      currentTop -= distance / steps; // 每次减少 distance / 总步数
+                      element.style.top = currentTop + 'px';
+
+                      var opacity = 1 - (currentStep / steps); // 计算透明度
+                      element.style.opacity = opacity;
+
+                      currentStep++;
+                      if (currentStep >= steps) {
+                        clearInterval(moveEffect);
+                        element.style.top = '0'; // 移动完成后恢复初始位置
+                        element.style.opacity = '0'; // 渐变完成后透明度设为0
+                      }
+                    }, interval);
+                  }
+
+                  var circleContainer = document.querySelector('.circle-container');
+                  var circleImg = document.querySelector('#circleImg');
+                  moveUpAndFadeOut(circleContainer, 60, 3000); // 向上移动100像素并在1秒钟内慢慢变透明
+
+
+
+                  var targetImg6 = document.getElementById('newb');
+
+                  targetImg6.style.zIndex = '9999';
+                  targetImg6.style.opacity = '1'
+                  targetImg6.style.transition = "opacity 1.5s"
+                  setTimeout(function () {
+                    location.href = "index3.html";
+                  }, 5000);
+                  setTimeout(function () {
+                    targetImg.src = 'res/im6.png';  // 更改新的图片内容
+                    targetImg.style.opacity = 1;  // 慢慢将新的图片浮现出来
+                  }, 500);
+                }, 500);
+                break;
+
+
+            }
+          }
+        }
+      }
+    });
+
+
+    circleImg.addEventListener('touchend', function (event) {
+      event.preventDefault();
+      isDragging = false;
+    });
+  </script>
+</body>
+
+</html>

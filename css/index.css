@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html,
+body {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+.contanior {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.bg {
+  position: relative;
+  margin: auto;
+  width: fit-content;
+  overflow: hidden;
+}
+
+.background {
+  max-width: 100%;
+  max-height: 100%;
+  height: 100vh;
+}
+
+.music {
+  position: absolute;
+  top: 3.53%;
+  left: 85.71%;
+  width: 9.69%;
+  height: 4.47%;
+}
+
+.music img {
+  width: 100%;
+  height: 100%;
+}
+
+.work {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 50%;
+}
+
+.work ul li {
+  position: absolute;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+.work ul li:first-child {
+  opacity: 1;
+}
+
+.work ul li img {
+  width: 100%;
+  height: 100%;
+}
+
+.diamond {
+  position: absolute;
+  top: 58%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 10%;
+}
+
+.diamond ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.diamond ul li {
+  width: 4%;
+  height: 4%;
+  transition: all 2s;
+}
+
+.diamond ul li img {
+  width: 100%;
+  height: 100%;
+}
+
+.load {
+  position: absolute;
+  top: 60%;
+  left: 52%;
+  width: 15%;
+  height: 4%;
+  transform: translate(-50%, -50%);
+  font-size: 130%;
+  color: #e6821e;
+}

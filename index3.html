@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>良渚文化</title>
+  <link rel="stylesheet" href="css/index3.css">
+</head>
+
+<body>
+  <div class="banner">
+    <div class="bg">
+      <img src="res/load_bg.png" alt="" class="background">
+      <div class="music" onclick="ms()">
+        <img src="res/music.png" alt="">
+        <audio src="res/mp3.mp3" loop="loop" preload="auto" autoplay="auto" class="ad"></audio>
+      </div>
+      <div class="hehua2">
+        <img src="res/hehua2.png" alt="">
+      </div>
+      <div class="hehua1">
+        <img src="res/hehua1.png" alt="">
+      </div>
+      <div class="title">
+        <img src="res/title3.png" alt="">
+      </div>
+      <div class="man">
+        <img src="res/man.png" alt="">
+      </div>
+      <div class="words">
+        请点击先人发亮部分
+      </div>
+      <div class="tool2" data-a-a="1">
+        <img src="res/象牙权杖2.png" alt="" class="t2">
+      </div>
+      <div class="tool3" data-a-a="1">
+        <img src="res/玉半圆形器2.png" alt="" class="t3">
+      </div>
+      <div class="tool4" data-a-a="1">
+        <img src="res/臂式镯形器2.png" alt="" class="t4">
+      </div>
+      <div class="tool5" data-a-a="1">
+        <img src="res/玉钺顶2.png" alt="" class="t5">
+      </div>
+      <div class="tool6" data-a-a="1">
+        <img src="res/玉钺底2.png" alt="" class="t6">
+      </div>
+      <div class="tool7" data-a-a="1">
+        <img src="res/玉钺2.png" alt="" class="t7">
+      </div>
+      <div class="tool8" data-a-a="1">
+        <img src="res/dfas2.png" alt="" class="t8">
+      </div>
+      <div class="tool9" data-a-a="1">
+        <img src="res/玉管串2.png" alt="" class="t9">
+      </div>
+      <div class="to1" data-a-a="1">
+        <img src="res/男1.png" alt="">
+      </div>
+      <div class="to2" data-a-a="2">
+        <img src="res/男2.png" alt="">
+      </div>
+      <div class="to3" data-a-a="3">
+        <img src="res/男3.png" alt="">
+      </div>
+      <div class="to4" data-a-a="4">
+        <img src="res/男4.png" alt="">
+      </div>
+      <div class="to5" data-a-a="5">
+        <img src="res/男5.png" alt="">
+      </div>
+      <div class="to6" data-a-a="6">
+        <img src="res/男6.png" alt="">
+      </div>
+      <div class="next">
+        下一关
+      </div>
+    </div>
+
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    let mp3 = document.querySelector(".ad")
+    function ms() {
+      if (mp3.paused) {
+        mp3.play()
+      } else {
+        mp3.pause()
+      }
+    }
+    $(document).ready(function () {
+      let bg = document.querySelector(".bg")
+      let count = 2;
+      $(".next").click(function () {
+        setTimeout(jump, 2000);
+      })
+      function jump() {
+        location.href = "index5.html";
+      }
+
+      function change() {
+        let newDiv = document.createElement("div")
+        let newImg = document.createElement("img")
+        bg.appendChild(newDiv)
+        newDiv.className = "active"
+        newDiv.appendChild(newImg)
+        newImg.className = "ok";
+        bg.onclick = function (e) {
+          var e = e || window.event;
+          var elem = e.target;
+          let targetArea = document.querySelector(".active")
+          if (targetArea) {
+            if (targetArea.contains(elem)) {
+            } else {
+              targetArea.remove()
+            }
+          }
+
+        }
+      }
+      function change2() {
+        let newDiv1 = document.createElement("div")
+        let newDiv2 = document.createElement("div")
+        let newDiv3 = document.createElement("div")
+        let newImg1 = document.createElement("img")
+        let newImg2 = document.createElement("img")
+        let newImg3 = document.createElement("img")
+        bg.appendChild(newDiv1)
+        newDiv1.className = "active"
+        newDiv1.appendChild(newImg1)
+        newImg1.className = "ok1";
+        bg.appendChild(newDiv2)
+        newDiv2.className = "active1"
+        newDiv2.appendChild(newImg2)
+        newImg2.className = "ok2";
+        bg.appendChild(newDiv3)
+        newDiv3.className = "active2"
+        newDiv3.appendChild(newImg3)
+        newImg3.className = "ok3";
+        bg.onclick = function (e) {
+          var e = e || window.event;
+          var elem = e.target;
+          let targetArea = document.querySelector(".active")
+          let targetArea1 = document.querySelector(".active1")
+          let targetArea2 = document.querySelector(".active2")
+          if (targetArea || targetArea1 || targetArea2) {
+            if (count == 2) {
+              if (targetArea2.contains(elem)) {
+              } else {
+                targetArea2.remove()
+              }
+              count--;
+            } else if (count == 1) {
+              if (targetArea1.contains(elem)) {
+              } else {
+                targetArea1.remove()
+              }
+              count--;
+            } else {
+              if (targetArea.contains(elem)) {
+              } else {
+                targetArea.remove()
+              }
+              count = 2;
+            }
+          }
+
+        }
+      }
+      document.querySelector(".to1").onclick = function (e) {
+        e.stopPropagation();
+        change()
+        console.log(e)
+        document.querySelector(".ok").src = "res/introduce2.png"
+        document.querySelector(".t2").src = "res/象牙权杖.png"
+        document.querySelector(".tool2").dataset.aA = "2"
+        isfull();
+      }
+      document.querySelector(".to2").onclick = function (e) {
+        e.stopPropagation();
+        change()
+        document.querySelector(".ok").src = "res/introduce3.png"
+        document.querySelector(".t8").src = "res/dfas.png"
+        document.querySelector(".tool8").dataset.aA = "2"
+        isfull();
+      }
+      document.querySelector(".to3").onclick = function (e) {
+        e.stopPropagation();
+        change2()
+        document.querySelector(".ok1").src = "res/introduce1.png"
+        document.querySelector(".ok2").src = "res/introduce4.png"
+        document.querySelector(".ok3").src = "res/introduce5.png"
+        document.querySelector(".t5").src = "res/玉钺顶.png"
+        document.querySelector(".t6").src = "res/玉钺底.png"
+        document.querySelector(".t7").src = "res/玉钺.png"
+        document.querySelector(".tool5").dataset.aA = "2"
+        document.querySelector(".tool6").dataset.aA = "2"
+        document.querySelector(".tool7").dataset.aA = "2"
+        isfull();
+      }
+      document.querySelector(".to4").onclick = function (e) {
+        e.stopPropagation();
+        change()
+        document.querySelector(".ok").src = "res/introduce6.png"
+        document.querySelector(".t9").src = "res/玉管串.png"
+        document.querySelector(".tool9").dataset.aA = "2"
+        isfull();
+      }
+      document.querySelector(".to5").onclick = function (e) {
+        e.stopPropagation();
+        change()
+        document.querySelector(".ok").src = "res/introduce7.png"
+        document.querySelector(".t3").src = "res/玉半圆形器.png"
+        document.querySelector(".tool3").dataset.aA = "2"
+        isfull();
+      }
+      document.querySelector(".to6").onclick = function (e) {
+        e.stopPropagation();
+        change()
+        document.querySelector(".ok").src = "res/introduce8.png"
+        document.querySelector(".t4").src = "res/臂式镯形器.png"
+        document.querySelector(".tool4").dataset.aA = "2"
+        isfull();
+      }
+      function isfull() {
+        let n = 0;
+        for (let i = 2; i < 10; i++) {
+          if (document.querySelector(".tool" + i).dataset.aA == "2") {
+            n++;
+          }
+        }
+        if (n == 8) {
+          document.querySelector(".next").style.opacity = "1";
+          document.querySelector(".next").style.zIndex = "10";
+        }
+      }
+
+      document.querySelector(".tool2").onclick = function (e) {
+        e.stopPropagation();
+        if (document.querySelector(".tool2").dataset.aA == "2") {
+          change()
+          document.querySelector(".ok").src = "res/introduce2.png"
+        }
+      }
+      document.querySelector(".tool3").onclick = function (e) {
+        e.stopPropagation();
+        if (document.querySelector(".tool3").dataset.aA == "2") {
+          change()
+          document.querySelector(".ok").src = "res/introduce7.png"
+        }
+      }
+      document.querySelector(".tool4").onclick = function (e) {
+        e.stopPropagation();
+        if (document.querySelector(".tool4").dataset.aA == "2") {
+          change()
+          document.querySelector(".ok").src = "res/introduce8.png"
+        }
+
+      }
+      document.querySelector(".tool5").onclick = function (e) {
+        e.stopPropagation();
+        if (document.querySelector(".tool5").dataset.aA == "2") {
+          change()
+          document.querySelector(".ok").src = "res/introduce4.png"
+        }
+
+      }
+      document.querySelector(".tool6").onclick = function (e) {
+        e.stopPropagation();
+        if (document.querySelector(".tool6").dataset.aA == "2") {
+          change()
+          document.querySelector(".ok").src = "res/introduce5.png"
+        }
+
+      }
+      document.querySelector(".tool7").onclick = function (e) {
+        e.stopPropagation();
+        if (document.querySelector(".tool7").dataset.aA == "2") {
+          change()
+          document.querySelector(".ok").src = "res/introduce1.png"
+        }
+
+      }
+      document.querySelector(".tool8").onclick = function (e) {
+        e.stopPropagation();
+        if (document.querySelector(".tool8").dataset.aA == "2") {
+          change()
+          document.querySelector(".ok").src = "res/introduce3.png"
+        }
+
+      }
+      document.querySelector(".tool9").onclick = function (e) {
+        e.stopPropagation();
+        if (document.querySelector(".tool9").dataset.aA == "2") {
+          change()
+          document.querySelector(".ok").src = "res/introduce6.png"
+        }
+
+      }
+    })
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>良渚文化</title>
+  <link rel="stylesheet" href="css/index5.css">
+</head>
+
+<body>
+  <div class="banner">
+    <div class="bg">
+      <img src="res/load_bg.png" alt="" class="background">
+      <div class="music" onclick="ms()">
+        <img src="res/music.png" alt="">
+        <audio src="res/mp3.mp3" loop="loop" preload="auto" autoplay="auto" class="ad"></audio>
+      </div>
+      <div class="hehua2">
+        <img src="res/hehua2.png" alt="">
+      </div>
+      <div class="hehua1">
+        <img src="res/hehua1.png" alt="">
+      </div>
+      <div class="title">
+        <img src="res/title3.png" alt="">
+      </div>
+      <div class="woman">
+        <img src="res/woman.png" alt="">
+      </div>
+      <div class="tool1" data-a-a="1">
+        <img src="res/半壁型玉璜2.png" alt="" class="t1">
+      </div>
+      <div class="tool2" data-a-a="1">
+        <img src="res/腕式镯形器2.png" alt="" class="t2">
+      </div>
+      <div class="tool3" data-a-a="1">
+        <img src="res/玉管串4.png" alt="" class="t3">
+      </div>
+      <div class="tool4" data-a-a="1">
+        <img src="res/臂式镯形器4.png" alt="" class="t4">
+      </div>
+      <div class="tool5" data-a-a="1">
+        <img src="res/玉圆牌2.png" alt="" class="t5">
+      </div>
+      <div class="tool6" data-a-a="1">
+        <img src="res/玉璜2.png" alt="" class="t6">
+      </div>
+      <div class="tool7" data-a-a="1">
+        <img src="res/玉璧2.png" alt="" class="t7">
+      </div>
+      <div class="to1" data-a-a="1">
+        <img src="res/女1.png" alt="">
+      </div>
+      <div class="to2" data-a-a="2">
+        <img src="res/女2.png" alt="">
+      </div>
+      <div class="to3" data-a-a="3">
+        <img src="res/女3.png" alt="">
+      </div>
+      <div class="to4" data-a-a="4">
+        <img src="res/女4.png" alt="">
+      </div>
+      <div class="to5" data-a-a="5">
+        <img src="res/女5.png" alt="">
+      </div>
+      <div class="to6" data-a-a="6">
+        <img src="res/女6.png" alt="">
+      </div>
+      <div class="to7" data-a-a="7">
+        <img src="res/女7.png" alt="">
+      </div>
+      <div class="next2">
+        <img src="res/左1.png" alt="">
+        向右划
+      </div>
+    </div>
+
+  </div>
+  <script>
+    let bg = document.querySelector(".bg")
+    let mp3 = document.querySelector(".ad")
+    function ms() {
+      if (mp3.paused) {
+        mp3.play()
+      } else {
+        mp3.pause()
+      }
+    }
+    function change() {
+      let newDiv = document.createElement("div")
+      let newImg = document.createElement("img")
+      let newImg2 = document.createElement("img")
+      bg.appendChild(newDiv)
+      newDiv.className = "active"
+      newDiv.appendChild(newImg)
+      newImg.className = "ok"
+      bg.onclick = function (e) {
+        var e = e || window.event;
+        var elem = e.target;
+        let targetArea = document.querySelector(".active")
+        if (targetArea) {
+          if (targetArea.contains(elem)) {
+          } else {
+            targetArea.remove()
+          }
+        }
+
+      }
+    }
+    document.querySelector(".to1").onclick = function (e) {
+      e.stopPropagation();
+      change()
+      document.querySelector(".ok").src = "res/introduce11.png"
+      document.querySelector(".t2").src = "res/腕式镯形器1.png"
+      document.querySelector(".tool2").dataset.aA = "2"
+      isfull()
+    }
+    document.querySelector(".to2").onclick = function (e) {
+      e.stopPropagation();
+      change()
+      document.querySelector(".ok").src = "res/introduce12.png"
+      document.querySelector(".t5").src = "res/玉圆牌.png"
+      document.querySelector(".tool5").dataset.aA = "2"
+      isfull()
+    }
+    document.querySelector(".to3").onclick = function (e) {
+      e.stopPropagation();
+      change()
+      document.querySelector(".ok").src = "res/introduce13.png"
+      document.querySelector(".t4").src = "res/臂式镯形器3.png"
+      document.querySelector(".tool4").dataset.aA = "2"
+      isfull()
+    }
+    document.querySelector(".to4").onclick = function (e) {
+      e.stopPropagation();
+      change()
+      document.querySelector(".ok").src = "res/introduce14.png"
+      document.querySelector(".t3").src = "res/玉管串3.png"
+      document.querySelector(".tool3").dataset.aA = "2"
+      isfull()
+    }
+    document.querySelector(".to5").onclick = function (e) {
+      e.stopPropagation();
+      change()
+      document.querySelector(".ok").src = "res/introduce15.png"
+      document.querySelector(".t1").src = "res/半壁型玉璜.png"
+      document.querySelector(".tool1").dataset.aA = "2"
+      isfull()
+    }
+    document.querySelector(".to6").onclick = function (e) {
+      e.stopPropagation();
+      change()
+      document.querySelector(".ok").src = "res/introduce16.png"
+      document.querySelector(".t7").src = "res/玉璧.png"
+      document.querySelector(".tool7").dataset.aA = "2"
+      isfull()
+    }
+    document.querySelector(".to7").onclick = function (e) {
+      e.stopPropagation();
+      change()
+      document.querySelector(".ok").src = "res/introduce17.png"
+      document.querySelector(".t6").src = "res/玉璜1.png"
+      document.querySelector(".tool6").dataset.aA = "2"
+      isfull()
+    }
+    function isfull() {
+      let n = 0;
+      for (let i = 1; i < 8; i++) {
+        if (document.querySelector(".tool" + i).dataset.aA == "2") {
+          n++;
+        }
+      }
+      if (n == 7) {
+        let newDiv = document.createElement("div")
+        let newImg = document.createElement("img")
+        let next2 = document.querySelector(".next2")
+        bg.appendChild(newDiv);
+        newDiv.className = "next";
+        newDiv.appendChild(newImg);
+        newImg.src = "res/godd.jpg";
+        next2.style.opacity = "1";
+
+        let startX = 0;
+        let startY = 0;
+
+        function onTouchStart(event) {
+          startX = event.touches[0].pageX;
+          startY = event.touches[0].pageY;
+        }
+
+        function onTouchMove(event) {
+          let endX = event.touches[0].pageX;
+          let endY = event.touches[0].pageY;
+          let distanceX = endX - startX;
+          let distanceY = endY - startY;
+          if (Math.abs(distanceX) > Math.abs(distanceY)) {
+            // 水平方向滑动
+            if (distanceX < -50) {
+              animate();
+            }
+          }
+        }
+        bg.addEventListener('touchstart', onTouchStart);
+        bg.addEventListener('touchmove', onTouchMove);
+      }
+    }
+    function animate() {
+      document.querySelector(".next").style.animation = "move 5s linear forwards"
+      setTimeout(jump, 6000);
+    }
+    function jump() {
+      location.href = "index6.html";
+    }
+    document.querySelector(".tool1").onclick = function (e) {
+      e.stopPropagation();
+      if (document.querySelector(".tool1").dataset.aA == "2") {
+        change()
+        document.querySelector(".ok").src = "res/introduce15.png"
+      }
+    }
+    document.querySelector(".tool2").onclick = function (e) {
+      e.stopPropagation();
+      if (document.querySelector(".tool2").dataset.aA == "2") {
+        change()
+        document.querySelector(".ok").src = "res/introduce11.png"
+      }
+    }
+    document.querySelector(".tool3").onclick = function (e) {
+      e.stopPropagation();
+      if (document.querySelector(".tool3").dataset.aA == "2") {
+        change()
+        document.querySelector(".ok").src = "res/introduce14.png"
+      }
+    }
+    document.querySelector(".tool4").onclick = function (e) {
+      e.stopPropagation();
+      if (document.querySelector(".tool4").dataset.aA == "2") {
+        change()
+        document.querySelector(".ok").src = "res/introduce13.png"
+      }
+    }
+    document.querySelector(".tool5").onclick = function (e) {
+      e.stopPropagation();
+      if (document.querySelector(".tool5").dataset.aA == "2") {
+        change()
+        document.querySelector(".ok").src = "res/introduce12.png"
+      }
+    }
+    document.querySelector(".tool6").onclick = function (e) {
+      e.stopPropagation();
+      if (document.querySelector(".tool6").dataset.aA == "2") {
+        change()
+        document.querySelector(".ok").src = "res/introduce17.png"
+      }
+    }
+    document.querySelector(".tool7").onclick = function (e) {
+      e.stopPropagation();
+      if (document.querySelector(".tool7").dataset.aA == "2") {
+        change()
+        document.querySelector(".ok").src = "res/introduce16.png"
+      }
+    }
+
+  </script>
+</body>
+
+</html>

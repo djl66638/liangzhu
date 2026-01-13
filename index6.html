@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<title>良渚文化</title>
+	<link rel="stylesheet" href="css/index6.css">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript">
+		//jquery实现三件商品介绍的打开和关闭 ，通过改变三张介绍图的css属性实现 
+		$(function () {
+			$(".goods1 img").on("click touchstart", function () { $(".file1").css("display", "block"); });
+			$(".close img").on("click touchstart", function () { $(".file1").css("display", "none"); });
+			$(".goods2 img").on("click touchstart", function () { $(".file2").css("display", "block"); });
+			$(".close img").on("click touchstart", function () { $(".file2").css("display", "none"); });
+			$(".goods3 img").on("click touchstart", function () { $(".file3").css("display", "block"); });
+			$(".close img").on("click touchstart", function () { $(".file3").css("display", "none"); });
+		});
+	</script>
+	<script src="js/script.js"></script>
+</head>
+
+<body>
+	<div class="banner">
+		<div class="bg">
+			<img src="res/desk_bg.png" alt="" class="background">
+			<div class="hehua2"> <img src="res/hehua2.png" alt=""></div>
+			<div class="hehua1"> <img src="res/hehua1.png" alt=""></div>
+			<div class="music" onclick="ms()">
+				<img src="res/music.png" alt="">
+				<audio src="res/mp3.mp3" loop="loop" preload="auto" autoplay="auto" class="ad"></audio>
+			</div>
+			<div class="title"> <img src="res/title.png" alt=""></div>
+			<div class="text1"> <img src="res/textTop.png" alt=""></div>
+			<div class="god"> <img src="res/god.png" alt=""></div>
+
+			<div class="circledesk"> <img src="res/desk.png" alt="">
+				<div class="goods1"> <img src="res/goods1.png" alt=""></div>
+				<div class="goods2"> <img src="res/goods2.png" alt=""></div>
+				<div class="goods3"> <img src="res/goods3.png" alt=""></div>
+			</div>
+			<div class="text2"> <img src="res/textBottom.png" alt=""></div>
+			<div class="paw"> <img src="res/paw.png" alt=""></div>
+			<div class="file1"> <img src="res/file1.png" alt="">
+				<div class="buy"> <img src="res/buy.png" alt=""></div>
+				<div class="close"> <img src="res/close.png" alt=""></div>
+			</div>
+			<div class="file2"> <img src="res/file2.png" alt="">
+				<div class="buy"> <img src="res/buy.png" alt=""></div>
+				<div class="close"> <img src="res/close.png" alt=""></div>
+			</div>
+			<div class="file3"> <img src="res/file3.png" alt="">
+				<div class="buy"> <img src="res/buy.png" alt=""></div>
+				<div class="close"> <img src="res/close.png" alt=""></div>
+			</div>
+		</div>
+	</div>
+	<script>
+		let mp3 = document.querySelector(".ad")
+		function ms() {
+			if (mp3.paused) {
+				mp3.play()
+			} else {
+				mp3.pause()
+			}
+		}
+	</script>
+</body>
+
+</html>

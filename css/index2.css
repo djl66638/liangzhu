@@ -1,0 +1,544 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html,
+body {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.bg {
+  position: relative;
+  margin: auto;
+  width: fit-content;
+  overflow: hidden;
+}
+
+
+
+
+.background {
+  max-width: 100%;
+  max-height: 100%;
+  height: 100vh;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: -999;
+  /* 确保覆盖层在上方 */
+}
+
+.overlay img {
+  width: 100%;
+  height: 100%;
+}
+
+.music {
+  position: absolute;
+  top: 3.53%;
+  left: 85.71%;
+  width: 9.69%;
+  height: 4.47%;
+}
+
+.music img {
+  width: 100%;
+  height: 100%;
+}
+
+.title {
+  position: absolute;
+  top: 7.67%;
+  left: 6.57%;
+  width: 68.8%;
+  height: 7.3%;
+  opacity: 1;
+  transition: all 2s;
+}
+
+.title img {
+  width: 100%;
+  height: 100%;
+}
+
+.word1 {
+  position: absolute;
+  top: 19.93%;
+  left: 47.47%;
+  width: 7.38%;
+  height: 23.52%;
+  opacity: 0;
+  transition: all 3s;
+}
+
+.word1 img {
+  width: 100%;
+  height: 100%;
+}
+
+.word2 {
+  position: absolute;
+  top: 50.38%;
+  left: 39.58%;
+  width: 21.07%;
+  height: 7.9%;
+  opacity: 0;
+  transition: all 3s;
+}
+
+.word2 img {
+  width: 100%;
+  height: 100%;
+}
+
+.yucongAll {
+  position: absolute;
+  top: 42.50%;
+  left: 30.04%;
+  width: 39.2%;
+  height: 15.27%;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: all 1s;
+  z-index: 4;
+}
+
+
+.yucong {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: all 1s;
+}
+
+.yucong img {
+  position: absolute;
+}
+
+.img1 {
+  opacity: 1;
+  transition: all 1s;
+  width: 87%;
+  height: 79%;
+  transform: translate(7%, 15%);
+  animation: move2 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transition: all 2s;
+}
+
+.img2 {
+  opacity: 0;
+  transition: all 1s;
+  width: 100%;
+  height: 100%;
+  animation: move3 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transition: all 2s;
+}
+
+.yucong2 {
+  position: absolute;
+  width: 64%;
+  opacity: 0;
+  transition: all 1s;
+  transform: translate(31%, -28%) rotateX(-97deg);
+}
+
+.yucong2 img {
+  width: 100%;
+  height: 100%;
+}
+
+.hehua1 {
+  position: absolute;
+  top: 3.86%;
+  left: 0;
+  width: 72.89%;
+  height: 58.92%;
+  opacity: 0;
+  transition: all 3s;
+}
+
+.hehua1 img {
+  width: 100%;
+  height: 100%;
+}
+
+.hehua2 {
+  position: absolute;
+  top: 36.40%;
+  right: 0;
+  width: 61.69%;
+  height: 58.92%;
+  opacity: 0;
+  transition: all 3s;
+}
+
+.hehua2 img {
+  width: 100%;
+  height: 100%;
+}
+
+.lang {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 45.36%;
+  opacity: 0;
+  transition: all 3s;
+}
+
+.lang img {
+  width: 100%;
+  height: 100%;
+}
+
+.word {
+  position: absolute;
+  top: 65.76%;
+  left: 31.55%;
+  width: 35.82%;
+  height: 2.87%;
+  animation: move 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transition: all 2s;
+}
+
+.word img {
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes move {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes move2 {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes move3 {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.circle-container {
+  position: absolute;
+  top: 83%;
+  left: -8%;
+  width: 117%;
+  height: 15.27%;
+  cursor: pointer;
+  background-color: transparent;
+  z-index: 4;
+  opacity: 0;
+  transition: all 3s;
+
+}
+
+.circle {
+  width: 100%;
+  /* 改为相对于圆形容器的100% /
+height: 100%; / 改为相对于圆形容器的100% */
+  position: relative;
+  border-radius: 10px;
+  background-color: #f2f2f2;
+  overflow: hidden;
+  transition: transform 0.5s ease;
+  background-color: transparent;
+}
+
+.circle:hover {
+  transform: rotate(360deg);
+}
+
+
+.shitou {
+  position: absolute;
+  top: 43%;
+  left: 18%;
+  width: 68%;
+  height: 25%;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 3s;
+}
+
+
+.shitou img {
+  opacity: 1;
+  /* 初始状态为完全不透明 */
+  transition: opacity 0.5s;
+  /* 添加过渡效果，持续时间为0.5秒 */
+  width: 100%;
+  height: 100%;
+}
+
+
+#targetImg {
+  position: absolute;
+  top: 27%;
+  left: 0;
+  opacity: 1;
+  /* 初始状态为完全不透明 */
+  transition: opacity 0.5s;
+  /* 添加过渡效果，持续时间为0.5秒 */
+  width: 100%;
+  height: 82%;
+  z-index: 1;
+}
+
+
+.inserted-div {
+  position: absolute;
+  top: 80%;
+  left: 1%;
+  width: 98%;
+  height: 15.27%;
+  cursor: pointer;
+}
+
+.inserted-div img {
+  width: 100%;
+  height: auto;
+}
+
+.kuang {
+  position: absolute;
+  top: 9.5%;
+  left: 12%;
+  width: 74%;
+  height: 5%;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 3s;
+}
+
+.kuang img {
+  width: 100%;
+  height: auto;
+}
+
+.wenzi {
+  position: absolute;
+  top: 11%;
+  left: 21%;
+  width: 55%;
+  height: 5%;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 3s;
+}
+
+
+.wenzi img {
+  width: 100%;
+  height: auto;
+}
+
+.jieshao {
+  position: absolute;
+  top: 30%;
+  left: 12%;
+  width: 80%;
+  height: 15%;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 3s;
+}
+
+
+.jieshao img {
+  width: 100%;
+  height: auto;
+}
+
+
+
+
+
+.zuandong {
+  position: absolute;
+  top: 45%;
+  left: 90%;
+  width: 6%;
+  height: 10%;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 3s;
+}
+
+
+.zuandong img {
+  width: 100%;
+  height: auto;
+}
+
+@keyframes moveDown {
+  0% {
+    top: -45%;
+  }
+
+  100% {
+    top: -35%;
+  }
+
+}
+
+.moving-image {
+  animation: moveDown 3s infinite;
+  transition: all 3s opacity 3s ease;
+}
+
+@keyframes moveDown2 {
+  0% {
+    top: 35%;
+  }
+
+  50% {
+    top: 50%;
+  }
+
+  100% {
+    top: 65%;
+  }
+}
+
+.moving-image2 {
+  animation: moveDown2 3s infinite;
+  transition: all 3s opacity 3s ease;
+}
+
+
+
+
+@keyframes moveDown3 {
+
+  0% {
+    transform: translateX(10%);
+  }
+
+  50% {
+    transform: translateX(15%);
+  }
+
+  100% {
+    transform: translateX(40%);
+  }
+}
+
+
+
+.moving-image3 {
+  animation: moveDown3 3s infinite;
+  transition: all 3s opacity 3s ease;
+}
+
+
+
+@keyframes moveDown4 {
+  0% {
+    transform: translate(0, 0);
+    /* 起始位置 */
+  }
+
+  50% {
+    transform: translate(45px, 30px);
+    /* 中间位置，根据需要调整位置 */
+  }
+
+  100% {
+    transform: translate(0, 0);
+    /* 返回起始位置 */
+  }
+}
+
+.moving-image4 {
+  animation: moveDown4 3s infinite;
+  transition: all 3s opacity 3s ease;
+}
+
+
+.show {
+  opacity: 1 !important;
+}
+
+.overlapping-div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* 设置遮罩层的背景颜色和透明度 */
+  z-index: 2;
+  transition: all 2s ease;
+}
+
+.jiantou {
+  position: absolute;
+  top: 76%;
+  left: 11%;
+  width: 20%;
+  height: 10%;
+  opacity: 0;
+  transition: all 7s;
+}
+
+.jiantou img {
+  width: 100%;
+  height: auto;
+}

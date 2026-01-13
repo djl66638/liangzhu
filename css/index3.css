@@ -1,0 +1,371 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html,
+body {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.bg {
+  position: relative;
+  margin: auto;
+  width: fit-content;
+  overflow: hidden;
+}
+
+
+.background {
+  max-width: 100%;
+  max-height: 100%;
+  height: 100vh;
+}
+
+.music {
+  position: absolute;
+  top: 3.53%;
+  left: 85.71%;
+  width: 9.69%;
+  height: 4.47%;
+}
+
+.music img {
+  width: 100%;
+  height: 100%;
+}
+
+.hehua1 {
+  position: absolute;
+  top: 3.86%;
+  left: 0;
+  width: 72.89%;
+  height: 58.92%;
+  opacity: 1;
+  transition: all 3s;
+}
+
+.hehua1 img {
+  width: 100%;
+  height: 100%;
+}
+
+.hehua2 {
+  position: absolute;
+  top: 36.40%;
+  right: 0;
+  width: 61.69%;
+  height: 58.92%;
+  opacity: 1;
+  transition: all 3s;
+}
+
+.hehua2 img {
+  width: 100%;
+  height: 100%;
+}
+
+.title {
+  position: absolute;
+  left: 20.36%;
+  top: 3.9%;
+  width: 59.29%;
+  height: 6.61%;
+}
+
+.title img {
+  width: 100%;
+  height: 100%;
+}
+
+.man {
+  position: absolute;
+  top: 15.76%;
+  left: 25.24%;
+  width: 47.91%;
+  height: 70.4%;
+}
+
+.man img {
+  width: 100%;
+  height: 100%;
+}
+
+.words {
+  position: absolute;
+  top: 11.76%;
+  left: 25.24%;
+  width: 47.91%;
+  height: 4.4%;
+  text-align: center;
+  color: #d2983c;
+  font-size: 136%;
+}
+
+.tool1 {
+  position: absolute;
+  top: 76.72%;
+  left: 75.82%;
+  width: 18.49%;
+  height: 13.71%;
+}
+
+.tool1 img {
+  width: 100%;
+  height: 100%;
+}
+
+.tool2 {
+  position: absolute;
+  top: 23.36%;
+  left: 0%;
+  width: 27.75%;
+  height: 31.57%;
+}
+
+.tool2 img {
+  width: 100%;
+  height: 100%;
+}
+
+.tool3 {
+  position: absolute;
+  top: 15.27%;
+  left: 9.47%;
+  width: 17.55%;
+  height: 6.241%;
+}
+
+.tool3 img {
+  width: 100%;
+  height: 100%;
+}
+
+.tool4 {
+  position: absolute;
+  top: 62.4%;
+  left: 68.65%;
+  width: 18.94%;
+  height: 7.39%;
+}
+
+.tool4 img {
+  width: 100%;
+  height: 100%;
+}
+
+.tool5 {
+  position: absolute;
+  top: 74.67%;
+  left: 3.43%;
+  width: 17.31%;
+  height: 4.31%;
+}
+
+.tool5 img {
+  width: 100%;
+  height: 100%;
+}
+
+.tool6 {
+  position: absolute;
+  top: 86.62%;
+  left: 3.35%;
+  width: 18.45%;
+  height: 3.82%;
+}
+
+.tool6 img {
+  width: 100%;
+  height: 100%;
+}
+
+.tool7 {
+  position: absolute;
+  top: 60.22%;
+  left: 3.35%;
+  width: 20.65%;
+  height: 11.74%;
+}
+
+.tool7 img {
+  width: 100%;
+  height: 100%;
+}
+
+.tool8 {
+  position: absolute;
+  top: 15.54%;
+  left: 74.93%;
+  width: 21.16%;
+  height: 9.24%;
+}
+
+.tool8 img {
+  width: 100%;
+  height: 100%;
+}
+
+.tool9 {
+  position: absolute;
+  top: 36.7%;
+  left: 75.29%;
+  width: 18.67%;
+  height: 21.1%;
+}
+
+.tool9 img {
+  width: 100%;
+  height: 100%;
+}
+
+.to1 {
+  position: absolute;
+  top: 15.7%;
+  left: 30.29%;
+  width: 9.67%;
+  height: 21.1%;
+  opacity: 0;
+}
+
+.to1 img {
+  width: 100%;
+  height: 100%;
+}
+
+.to2 {
+  position: absolute;
+  top: 35.7%;
+  left: 27.29%;
+  width: 8%;
+  height: 3.5%;
+  opacity: 0;
+}
+
+.to2 img {
+  width: 100%;
+  height: 100%;
+}
+
+.to3 {
+  position: absolute;
+  top: 30%;
+  left: 43.29%;
+  width: 26%;
+  height: 21.5%;
+  opacity: 0;
+}
+
+.to3 img {
+  width: 100%;
+  height: 100%;
+}
+
+.to4 {
+  position: absolute;
+  top: 33.5%;
+  left: 40.29%;
+  width: 14%;
+  height: 8.5%;
+  opacity: 0;
+}
+
+.to4 img {
+  width: 100%;
+  height: 100%;
+}
+
+.to5 {
+  position: absolute;
+  top: 24%;
+  left: 45.29%;
+  width: 11.5%;
+  height: 3.5%;
+  opacity: 0;
+}
+
+.to5 img {
+  width: 100%;
+  height: 100%;
+}
+
+.to6 {
+  position: absolute;
+  top: 44.6%;
+  left: 57.29%;
+  width: 8%;
+  height: 4.5%;
+  opacity: 0;
+}
+
+.to6 img {
+  width: 100%;
+  height: 100%;
+}
+
+.active {
+  position: absolute;
+  top: 10.30%;
+  left: 2.98%;
+  width: 94.04%;
+  height: 79.39%;
+}
+
+.active img {
+  width: 100%;
+  height: 100%;
+}
+
+.active1 {
+  position: absolute;
+  top: 10.30%;
+  left: 2.98%;
+  width: 94.04%;
+  height: 79.39%;
+}
+
+.active1 img {
+  width: 100%;
+  height: 100%;
+}
+
+.active2 {
+  position: absolute;
+  top: 10.30%;
+  left: 2.98%;
+  width: 94.04%;
+  height: 79.39%;
+}
+
+.active2 img {
+  width: 100%;
+  height: 100%;
+}
+
+.next {
+  position: absolute;
+  top: 86.3%;
+  left: 70.98%;
+  width: 19.04%;
+  height: 5.39%;
+  line-height: 293.39%;
+  text-align: center;
+  color: white;
+  opacity: 0;
+  border-radius: 10%;
+  background-color: #d2983c;
+  z-index: -1;
+}

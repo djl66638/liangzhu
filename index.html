@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>良渚文化</title>
+  <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+  <div class="contanior">
+    <div class="bg">
+      <img src="res/load_bg.png" alt="" class="background">
+      <div class="work">
+        <ul>
+          <li><img src="res/load1.png" alt=""></li>
+          <li><img src="res/load2.png" alt=""></li>
+          <li><img src="res/load3.png" alt=""></li>
+          <li><img src="res/load4.png" alt=""></li>
+          <li><img src="res/load5.png" alt=""></li>
+          <li><img src="res/load6.png" alt=""></li>
+          <li><img src="res/load7.png" alt=""></li>
+          <li><img src="res/load8.png" alt=""></li>
+          <li><img src="res/load9.png" alt=""></li>
+          <li><img src="res/load10.png" alt=""></li>
+        </ul>
+      </div>
+      <div class="diamond">
+        <ul>
+          <li><img src="res/diamond1.png" alt=""></li>
+          <li><img src="res/diamond2.png" alt=""></li>
+          <li><img src="res/diamond2.png" alt=""></li>
+          <li><img src="res/diamond2.png" alt=""></li>
+          <li><img src="res/diamond2.png" alt=""></li>
+          <li><img src="res/diamond2.png" alt=""></li>
+          <li><img src="res/diamond2.png" alt=""></li>
+          <li><img src="res/diamond2.png" alt=""></li>
+          <li><img src="res/diamond2.png" alt=""></li>
+          <li><img src="res/diamond2.png" alt=""></li>
+        </ul>
+      </div>
+      <div class="load">
+        10%
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      let n = 1;
+      let load_pic = $(".work ul li:nth-child(1)");
+      let diamond = $(".diamond ul li:nth-child(1) img");
+      let move = setInterval(start, 1000);
+      let load = $(".load");
+
+      function start() {
+        load_pic.css({
+          transition: "all 0s",
+          opacity: "0"
+        });
+        diamond.attr("src", "res/diamond2.png");
+        n++;
+        load_pic = $(`.work ul li:nth-child(${n})`);
+        diamond = $(`.diamond ul li:nth-child(${n}) img`);
+        load_pic.css({
+          transition: "all 1s",
+          opacity: "1"
+        });
+        diamond.attr("src", "res/diamond1.png");
+        load.html(`${n * 10}%`);
+        if (n === 10) {
+          clearInterval(move);
+          setTimeout(jump, 2000);
+        }
+      }
+
+      function jump() {
+        location.href = "index2.html";
+      }
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,346 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html,
+body {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.bg {
+  position: relative;
+  margin: auto;
+  width: fit-content;
+  overflow: hidden;
+}
+
+
+.background {
+  max-width: 100%;
+  max-height: 100%;
+  height: 100vh;
+}
+
+.music {
+  position: absolute;
+  top: 3.53%;
+  left: 85.71%;
+  width: 9.69%;
+  height: 4.47%;
+}
+
+.music img {
+  width: 100%;
+  height: 100%;
+}
+
+.hehua1 {
+  position: absolute;
+  top: 3.86%;
+  left: 0;
+  width: 72.89%;
+  height: 58.92%;
+  opacity: 1;
+  transition: all 3s;
+}
+
+.hehua1 img {
+  width: 100%;
+  height: 100%;
+}
+
+.hehua2 {
+  position: absolute;
+  top: 36.40%;
+  right: 0;
+  width: 61.69%;
+  height: 58.92%;
+  opacity: 1;
+  transition: all 3s;
+}
+
+.hehua2 img {
+  width: 100%;
+  height: 100%;
+}
+
+.title {
+  position: absolute;
+  left: 20.36%;
+  top: 3.9%;
+  width: 59.29%;
+  height: 6.61%;
+}
+
+.title img {
+  width: 100%;
+  height: 100%;
+}
+
+.woman {
+  position: absolute;
+  top: 15.76%;
+  left: 25.24%;
+  width: 47.91%;
+  height: 70.4%;
+}
+
+.woman img {
+  width: 100%;
+  height: 100%;
+}
+
+.tool1 {
+  position: absolute;
+  top: 13.67%;
+  left: 10.13%;
+  width: 19.47%;
+  height: 18.31%;
+}
+
+.tool1 img {
+  width: 100%;
+  height: 100%;
+}
+
+.tool2 {
+  position: absolute;
+  top: 85.14%;
+  left: 69.07%;
+  width: 28.27%;
+  height: 9.14%;
+}
+
+.tool2 img {
+  width: 100%;
+  height: 100%;
+}
+
+.tool3 {
+  position: absolute;
+  top: 30.21%;
+  left: 71.38%;
+  width: 25.16%;
+  height: 15.35%;
+}
+
+.tool3 img {
+  width: 100%;
+  height: 100%;
+}
+
+.tool4 {
+  position: absolute;
+  top: 74.01%;
+  left: 4%;
+  width: 21.78%;
+  height: 7.68%;
+}
+
+.tool4 img {
+  width: 100%;
+  height: 100%;
+}
+
+.tool5 {
+  position: absolute;
+  top: 50%;
+  left: 75.64%;
+  width: 17.42%;
+  height: 24.01%;
+}
+
+.tool5 img {
+  width: 100%;
+  height: 100%;
+}
+
+.tool6 {
+  position: absolute;
+  top: 35.8%;
+  left: 9.07%;
+  width: 16.71%;
+  height: 19.49%;
+}
+
+.tool6 img {
+  width: 100%;
+  height: 100%;
+}
+
+.tool7 {
+  position: absolute;
+  top: 59%;
+  left: 3.73%;
+  width: 24.98%;
+  height: 11.62%;
+}
+
+.tool7 img {
+  width: 100%;
+  height: 100%;
+}
+
+.to1 {
+  position: absolute;
+  top: 49.7%;
+  left: 28.29%;
+  width: 38.67%;
+  height: 2.1%;
+  opacity: 0;
+}
+
+.to1 img {
+  width: 100%;
+  height: 100%;
+}
+
+.to2 {
+  position: absolute;
+  top: 50.2%;
+  left: 40.29%;
+  width: 5%;
+  height: 8.5%;
+  opacity: 0;
+}
+
+.to2 img {
+  width: 100%;
+  height: 100%;
+}
+
+.to3 {
+  position: absolute;
+  top: 40%;
+  left: 30.29%;
+  width: 36%;
+  height: 4.5%;
+  opacity: 0;
+}
+
+.to3 img {
+  width: 100%;
+  height: 100%;
+}
+
+.to4 {
+  position: absolute;
+  top: 31.5%;
+  left: 39.29%;
+  width: 17%;
+  height: 1.5%;
+  opacity: 0;
+}
+
+.to4 img {
+  width: 100%;
+  height: 100%;
+}
+
+.to5 {
+  position: absolute;
+  top: 33.5%;
+  left: 38.29%;
+  width: 14.5%;
+  height: 2%;
+  opacity: 0;
+}
+
+.to5 img {
+  width: 100%;
+  height: 100%;
+}
+
+.to6 {
+  position: absolute;
+  top: 36%;
+  left: 38.29%;
+  width: 10%;
+  height: 10%;
+  opacity: 0;
+}
+
+.to6 img {
+  width: 100%;
+  height: 100%;
+}
+
+.to7 {
+  position: absolute;
+  top: 46.6%;
+  left: 37%;
+  width: 14%;
+  height: 3%;
+  opacity: 0;
+}
+
+.to7 img {
+  width: 100%;
+  height: 100%;
+}
+
+.active {
+  position: absolute;
+  top: 10.30%;
+  left: 2.98%;
+  width: 94.04%;
+  height: 79.39%;
+}
+
+.active img {
+  width: 100%;
+  height: 100%;
+}
+
+.next {
+  position: absolute;
+  top: 0%;
+  left: 100%;
+  height: 100%;
+  width: 300%;
+}
+
+.next img {
+  width: 100%;
+  height: 100%;
+}
+
+.next2 {
+  position: absolute;
+  top: 88%;
+  left: 42%;
+  height: 5%;
+  width: 16%;
+  color: white;
+  text-align: center;
+  opacity: 0;
+}
+
+.next2 img {
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes move {
+  0% {
+    left: 100%;
+  }
+
+  100% {
+    left: -200%;
+  }
+}
